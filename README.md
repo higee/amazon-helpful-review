@@ -1,2 +1,13 @@
-# amazon-helpful-review
-predict 'helpful' review on amazon based on length, topic, sentiment, readability
+### Amazon-Helpful-Review 
+---
+#### Problem Recognition
+* "Too many reviews to read" and "Not all recommended reviews/feedbacks were useful" were my two most important problems beore starting the project. I read other people's review carefully especially when I buy itmes online. Fortunately most of the review sites were awash in information. However, not all reviews were helpful and another burden for me was that I had to go through the reviews (even in "most recommended" sections) to find right review for me. 
+* My unconveniences were as follows. One was that I found tendency that the earlier someone leaves a review, the more likely his/her review is to be recommended. On the other hand if there are already enough 'helpful/recommended reviews' on specific item,  the entry barrier for a new 'really helpful' review is too high to break regardless of the quality of the reivew. Second is that, people have different point of view defining what a good review is. So, best review in a web site might not be the one I was looking for. For instance, I'm design-sensitive when even buying an electroni device. So my filter for 'good review' is one that contains other people's comment on design. 
+
+#### Brief Introduction
+* So I wanted to solve two problems. First, I need to build a model that can predict whether review is helpful or not when someone writes a review. I focused on 'recall score' when training a model to literally predict close to human classifier. By doing this, I thought 'whether a review is helpful or not' will mainly be determined by the content.
+* Second, I extracted main topic categories (up to 14) and counted the occurence of each topic for every review. The aim was to let people(review reader) read reviews talking about topics they are most interested in. 
+
+#### Limits and Learnings 
+* Firstly, model's performance hasn't been much improved compared to the baseline. Actually, I don't even know the approximate ceiling score since I haven't done human classifier test. However I found some interesting ideas on similar projects. For instance, I just counted occurence of topic per each review, (i.e., review No1. topic1(price): 0, topic2(design):1, ...) whereas the one I found online calculated proportion of each topic per each review. (i.e., review No1. => topic1(price): 20%, topic2(design): 30%, ...) That's something I want to try to imporve my score!.
+* Second, I used nltk and textblob when extracting topics. On the other hand, LDA (latent dirichlet allocation) was the most popular way in topic modeling in text analysis. I also used this algorithm but ended up poor performance. Moreover, since I didn't fully understand how LDA model, I couldn't go further. So my goal for the next text analysis project would be consider using LDA after fully understanding the mechanism.
