@@ -1,0 +1,5 @@
+,density,positive,negative,word,sentence,flesch reading,word/sentence,syllable/word,depth,occurrence,rank,redundancy,total topic
+sentiment,0.049,0.006,0.006,,,,,,,,,,
+length,,,,0.144,0.034,,,,,,,,
+readability,,,,,,0.086,0.053,0.041,,,,,
+topic,,,,,,,,,0.302,0.132,0.093,0.044,0.008
